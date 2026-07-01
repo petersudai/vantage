@@ -23,3 +23,11 @@ export const brand = {
   phone: '+971 4 000 0000',
   address: 'Floor 31, Solene Tower, Downtown Dubai',
 }
+
+// Credit shown quietly in the footer, since this is pitch collateral, not
+// Vantage's real site. Edit freely: name, email, and the line itself.
+export const builder = {
+  name: 'Peter Sudai',
+  email: 'psudai@gmail.com',
+  note: 'A concept built by',
+}

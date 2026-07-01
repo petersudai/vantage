@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
+import useDocumentTitle from '../lib/useDocumentTitle.js'
 
 export default function NotFound() {
+  useDocumentTitle('Not Found — Vantage')
   return (
     <section className="flex min-h-[70svh] items-center bg-canvas">
       <div className="shell text-center">

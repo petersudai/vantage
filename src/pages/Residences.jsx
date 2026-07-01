@@ -5,8 +5,10 @@ import PropertyCard from '../components/PropertyCard.jsx'
 import Reveal from '../components/Reveal.jsx'
 import { properties } from '../data/properties.js'
 import { applyFilters } from '../lib/filters.js'
+import useDocumentTitle from '../lib/useDocumentTitle.js'
 
 export default function Residences() {
+  useDocumentTitle('Residences — Vantage')
   const [type, setType] = useState('All')
   const [area, setArea] = useState('All')
   const [band, setBand] = useState('any')

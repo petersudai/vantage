@@ -7,10 +7,13 @@ import NotFound from './NotFound.jsx'
 import { getProperty, properties } from '../data/properties.js'
 import { getAgent } from '../data/team.js'
 import { formatPriceFull, formatPrice, formatSqft } from '../lib/format.js'
+import useDocumentTitle from '../lib/useDocumentTitle.js'
 
 export default function ResidenceDetail() {
   const { slug } = useParams()
   const property = getProperty(slug)
+
+  useDocumentTitle(property ? `${property.name} — Vantage` : 'Not Found — Vantage')
 
   if (!property) return <NotFound />
 

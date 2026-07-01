@@ -2,8 +2,10 @@ import PageHeader from '../components/PageHeader.jsx'
 import SmartImage from '../components/SmartImage.jsx'
 import Reveal from '../components/Reveal.jsx'
 import { team } from '../data/team.js'
+import useDocumentTitle from '../lib/useDocumentTitle.js'
 
 export default function Team() {
+  useDocumentTitle('Team — Vantage')
   return (
     <>
       <PageHeader

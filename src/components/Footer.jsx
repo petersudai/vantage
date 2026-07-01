@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Wordmark from './Wordmark.jsx'
-import { brand, communities } from '../data/site.js'
+import { brand, builder, communities } from '../data/site.js'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -56,6 +56,13 @@ export default function Footer() {
             © {year} Vantage Residences. A concept. All listings are fictional.
           </p>
         </div>
+
+        <p className="mt-4 font-sans text-xs text-canvas/30">
+          {builder.note}{' '}
+          <a href={`mailto:${builder.email}`} className="underline decoration-canvas/20 underline-offset-2 transition-colors hover:text-canvas/60">
+            {builder.name}
+          </a>
+        </p>
       </div>
     </footer>
   )

@@ -6,6 +6,7 @@ import Reveal from '../components/Reveal.jsx'
 import { properties, featuredProperty } from '../data/properties.js'
 import { stats } from '../data/site.js'
 import { formatPrice, formatSqft } from '../lib/format.js'
+import useDocumentTitle from '../lib/useDocumentTitle.js'
 
 const loadContainer = {
   hidden: {},
@@ -40,6 +41,7 @@ const processSteps = [
 ]
 
 export default function Home() {
+  useDocumentTitle('Vantage — Residences of Dubai')
   const flagship = featuredProperty
 
   return (

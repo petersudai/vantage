@@ -3,6 +3,7 @@ import PageHeader from '../components/PageHeader.jsx'
 import SmartImage from '../components/SmartImage.jsx'
 import Reveal from '../components/Reveal.jsx'
 import { stats } from '../data/site.js'
+import useDocumentTitle from '../lib/useDocumentTitle.js'
 
 const principles = [
   {
@@ -20,6 +21,7 @@ const principles = [
 ]
 
 export default function About() {
+  useDocumentTitle('About — Vantage')
   return (
     <>
       <PageHeader
