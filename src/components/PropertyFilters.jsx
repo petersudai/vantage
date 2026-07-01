@@ -19,8 +19,10 @@ export default function PropertyFilters({
   return (
     <div className="border-y border-ink/12 py-6">
       <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-        {/* Type as a visible segmented control, the primary filter */}
-        <div className="flex flex-wrap items-center gap-1 rounded-full border border-ink/12 p-1">
+        {/* Type as a visible segmented control, the primary filter. Scrolls as
+            a single row rather than wrapping, so the pill shape stays intact
+            on narrow screens. */}
+        <div className="flex items-center gap-1 overflow-x-auto rounded-full border border-ink/12 p-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {typeOptions.map((t) => {
             const isActive = type === t
             return (
@@ -28,7 +30,7 @@ export default function PropertyFilters({
                 key={t}
                 type="button"
                 onClick={() => onType(t)}
-                className={`rounded-full px-5 py-2 font-sans text-sm tracking-wide transition-colors duration-300 ${
+                className={`shrink-0 whitespace-nowrap rounded-full px-5 py-2 font-sans text-sm tracking-wide transition-colors duration-300 ${
                   isActive ? 'bg-ink text-canvas' : 'text-ink/60 hover:text-ink'
                 }`}
               >
