@@ -7,3 +7,6 @@ dist-ssr
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Local-only project brief
+Vantage_ClaudeCode_BuildPrompt.md
