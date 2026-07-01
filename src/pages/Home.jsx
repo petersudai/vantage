@@ -41,7 +41,7 @@ const processSteps = [
 ]
 
 export default function Home() {
-  useDocumentTitle('Vantage — Residences of Dubai')
+  useDocumentTitle('Vantage — A Considered Collection of Dubai Residences')
   const flagship = featuredProperty
 
   return (
