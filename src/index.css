@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-canvas text-ink font-sans;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Headlines optically lean a touch lighter than body weight */
+  h1, h2, h3, h4 {
+    @apply font-serif;
+    font-weight: 400;
+  }
+
+  ::selection {
+    background-color: #1F3D2E;
+    color: #F5F1EA;
+  }
+
+  /* Keep focus rings present but in-brand */
+  :focus-visible {
+    outline: 2px solid #2C5440;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-shell px-6 sm:px-8 lg:px-12;
+  }
+
+  /* Small tracked label used to mark sections with real meaning */
+  .eyebrow {
+    @apply font-sans text-[0.7rem] uppercase tracking-eyebrow font-medium;
+  }
+
+  /* The single primary action style, reused everywhere */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full px-7 py-3.5
+           font-sans text-sm font-medium tracking-wide transition-all duration-500 ease-editorial
+           disabled:cursor-not-allowed disabled:opacity-40;
+  }
+  .btn-primary {
+    @apply btn bg-emerald text-canvas hover:bg-emerald-soft;
+  }
+  /* Inverse primary, for use on dark grounds */
+  .btn-primary-on-dark {
+    @apply btn bg-canvas text-ink hover:bg-white;
+  }
+
+  /* The single quiet/tertiary action: a tracked link with an animated rule.
+     Add the `group` class on the element itself in markup to drive the line. */
+  .link-cta {
+    @apply inline-flex items-center gap-3 font-sans text-sm font-medium tracking-wide;
+  }
+  .link-cta__line {
+    @apply relative inline-block h-px w-8 bg-current overflow-hidden align-middle;
+  }
+
+  .hairline {
+    @apply border-ink/12;
+  }
+  .hairline-on-dark {
+    @apply border-canvas/15;
+  }
+
+  .field {
+    @apply w-full rounded-lg border border-ink/15 bg-transparent px-4 py-3 font-sans text-sm
+           text-ink placeholder:text-stone-400 transition-colors duration-300
+           focus:border-emerald focus:outline-none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  /* Editorial duotone treatment for portraits and select imagery */
+  .duotone {
+    filter: grayscale(1) contrast(1.02) brightness(0.98) sepia(0.12);
+    transition: filter 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .group:hover .duotone {
+    filter: grayscale(0) contrast(1) brightness(1) sepia(0);
+  }
+}
+
+/* Respect reduced-motion across all considered motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* A restrained, in-brand scrollbar */
+::-webkit-scrollbar {
+  width: 11px;
+}
+::-webkit-scrollbar-track {
+  background: #ECE5D8;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4BBAB;
+  border: 3px solid #ECE5D8;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A39A8A;
+}

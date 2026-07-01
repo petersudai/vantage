@@ -1,0 +1,73 @@
+// Placeholder team for the Vantage concept. Names and details are fictional.
+// Image values are Unsplash photo IDs, resolved in lib/images.js.
+
+export const team = [
+  {
+    id: 'leila-haddad',
+    name: 'Leila Haddad',
+    role: 'Founder & Principal',
+    since: '2009',
+    focus: 'Downtown and waterfront residences',
+    email: 'leila@vantage.ae',
+    phone: '+971 4 000 0001',
+    note: 'Founded Vantage on a single idea: represent fewer homes, and know each one completely.',
+    image: '1494790108377-be9c29b29330',
+  },
+  {
+    id: 'idris-okonkwo',
+    name: 'Idris Okonkwo',
+    role: 'Partner, Villas & Land',
+    since: '2012',
+    focus: 'Palm Jumeirah and Dubai Hills',
+    email: 'idris@vantage.ae',
+    phone: '+971 4 000 0002',
+    note: 'Reads a plot before a plan. Has placed more of the frond than he will admit to.',
+    image: '1500648767791-00dcc994a43e',
+  },
+  {
+    id: 'mara-velasco',
+    name: 'Mara Velasco',
+    role: 'Senior Residence Consultant',
+    since: '2015',
+    focus: 'Dubai Hills and the village communities',
+    email: 'mara@vantage.ae',
+    phone: '+971 4 000 0003',
+    note: 'Patient with first homes and exacting about light. Clients tend to return.',
+    image: '1573496359142-b8d87734a5a2',
+  },
+  {
+    id: 'soren-keller',
+    name: 'Søren Keller',
+    role: 'Head of Client Relations',
+    since: '2017',
+    focus: 'Private viewings and aftercare',
+    email: 'soren@vantage.ae',
+    phone: '+971 4 000 0004',
+    note: 'Looks after everything that happens between an offer and a set of keys.',
+    image: '1507003211169-0a1dd7228f2d',
+  },
+  {
+    id: 'aisha-rahman',
+    name: 'Aisha Rahman',
+    role: 'Residence Consultant',
+    since: '2020',
+    focus: 'Business Bay and city apartments',
+    email: 'aisha@vantage.ae',
+    phone: '+971 4 000 0005',
+    note: 'Knows the canal towers floor by floor, and which ones hold their value.',
+    image: '1544005313-94ddf0286df2',
+  },
+  {
+    id: 'yuki-tan',
+    name: 'Yuki Tan',
+    role: 'Head of Research & Valuation',
+    since: '2018',
+    focus: 'Pricing, comparables and market signal',
+    email: 'yuki@vantage.ae',
+    phone: '+971 4 000 0006',
+    note: 'The quiet arithmetic behind every number Vantage puts in writing.',
+    image: '1506794778202-cad84cf45f1d',
+  },
+]
+
+export const getAgent = (id) => team.find((m) => m.id === id)
