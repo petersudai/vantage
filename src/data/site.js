@@ -21,6 +21,10 @@ export const brand = {
   line: 'Residences of Dubai',
   email: 'private@vantage.ae',
   phone: '+971 4 000 0000',
+  // Placeholder UAE mobile number, digits only, for the wa.me link. Not a
+  // working line, kept consistent with the rest of the fictional brand data.
+  whatsapp: '971500000000',
+  whatsappDisplay: '+971 50 000 0000',
   address: 'Floor 31, Solene Tower, Downtown Dubai',
 }
 
